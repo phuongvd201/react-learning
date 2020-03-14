@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { LoginControl } from './LoginControl';
-import Blog from './Blog';
+import NameForm from './Forms/NameForm';
 
 const numbers = [1, 2, 3, 4, 5, 6];
 function NumberList(props) {
@@ -20,7 +19,7 @@ const posts = [
     { id: 2, title: 'Hello 2', content: 'Content 2' },
 
 ]
-ReactDOM.render(<Blog posts={posts} />, document.getElementById('root'));
+ReactDOM.render(<NameForm />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
