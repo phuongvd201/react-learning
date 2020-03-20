@@ -10,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Hello name="chao phuong"/>
+        <Hello name="chao phuong" />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,11 +24,9 @@ function App() {
   );
 }
 
-
-function Hello(props){
+function Hello(props) {
   return <div>Hello {props.name} </div>;
 }
-
 
 // function tick(){
 //   const element = (
