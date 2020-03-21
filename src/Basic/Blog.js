@@ -1,32 +1,40 @@
 import React, { Component } from 'react';
 
 class Blog extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    sidebar = <ul>
+  sidebar = (
+    <ul>
+      {this.props.posts.map(post => (
+        <li key={[post.id]}>
+          <p>{post.title}</p>
+        </li>
+      ))}
+    </ul>
+  );
 
-        {this.props.posts.map((post) => <li key={[post.id]}><p>{post.title}</p></li>)}
+  content = (
+    <ul>
+      {this.props.posts.map(post => (
+        <li key={[post.id]}>
+          <p>{post.content}</p>
+        </li>
+      ))}
+    </ul>
+  );
 
-    </ul>;
-
-    content = <ul>
-        {this.props.posts.map((post) => <li key={[post.id]}> <p>{post.content}</p></li>)}
-
-    </ul>;
-
-
-    render() {
-        return (
-            <div>
-                {this.sidebar}
-                <hr></hr>
-                {this.content}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        {this.sidebar}
+        <hr></hr>
+        {this.content}
+      </div>
+    );
+  }
 }
 
 export default Blog;

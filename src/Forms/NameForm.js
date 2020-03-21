@@ -8,15 +8,12 @@ class NameForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
-      value: '',
+      value: 'a',
     };
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
-    this.setState((state, props) => {
-      return { value: props.value };
-    });
+    this.setState({ value: event.target.value.toUpperCase() });
   }
 
   handleSubmit(event) {
